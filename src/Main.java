@@ -3,19 +3,25 @@ public class Main {
 
         Author PiratesOfTheCaribbean = new Author("Rob", "Kidd");
         Book Book = new Book("Pirates of the Caribbean", PiratesOfTheCaribbean, 2006);
-        System.out.println("Book = " + Book.getName());
-        System.out.println("Author = " + PiratesOfTheCaribbean.getFirstName() + " " + PiratesOfTheCaribbean.getLastName());
-        System.out.println("Book years = " + Book.getYears());
+        System.out.println(Book);
 
         System.out.println();
 
         Author MisteriousIsland = new Author("Jules", "Verne");
         Book Misterious = new Book("Misterious Island", MisteriousIsland, 1877);
-        System.out.println("Book = " + Misterious.getName());
-        System.out.println("Author = " + MisteriousIsland.getFirstName() + " " + MisteriousIsland.getLastName());
+        System.out.println(Misterious);
 
-        Misterious.setYears(1875);
-        System.out.println("Book years = " + Misterious.getYears());
+        System.out.println();
 
+        System.out.println(Book.equals(Misterious));
+        System.out.println();
+
+        Author Barry = new Author("Pitt", "Barns");
+        Book Nick = new Book("Speed", Barry, 2002);
+
+        Author Allen = new Author("Pit", "Barns");
+        Book Grey = new Book("Speed", Allen, 2002);
+
+        System.out.println(Grey.equals(Nick));
     }
 }
